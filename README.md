@@ -7,8 +7,14 @@ example webapp using:
 - [x] Cypress
 - [x] Jest
 - [x] JSDoc
+- [ ] use a nice feedback form (https://github.com/m-abdelwahab/feedback-widget, cut for time)
 
-Backend is generating mock data for this demo, but it's an AWS Lambda that will scale "for free", and could easily point to a genuine DB! :)
+things used:
+
+- ant design for most of the components (cards, lists, buttons...)
+- aws lambda running nodejs to generate trip data (app makes _real_ http requests!)
+
+AWS Lambda as a "serverless" backend will scale "for free", and could easily point to a genuine DB! :)
 
 ![image showing what it looks like!](./README/screenshot.png)
 
