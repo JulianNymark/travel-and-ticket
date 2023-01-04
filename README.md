@@ -1,4 +1,6 @@
-# Next.js + Cypress
+# Next.js webapp
+
+see the hosted [demo](https://ailurus.world/demos/travel-and-ticket)
 
 example webapp using:
 
