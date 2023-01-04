@@ -3,6 +3,7 @@ import { Button, Space, Table, Tag } from "antd";
 import type { ColumnsType } from "antd/es/table";
 import * as moment from "moment";
 import styles from "../styles/Home.module.css";
+import Link from "next/link";
 
 interface DataType {
   id: string;
@@ -36,9 +37,10 @@ const columns: ColumnsType<DataType> = [
     key: "estDuration",
     render: (minutes) => {
       const timeData = moment.duration(minutes, "minutes")
-      const mins = timeData.asMinutes().toFixed();
-      const hours = timeData.asHours().toFixed();
-      const humanTime = `${hours ? hours + " h" : ""} ${mins ? mins + " min" : ""}`
+      const hours = Math.floor(timeData.asHours());
+      const hourAsMins = parseInt(moment.duration(hours, "h").asMinutes().toFixed());
+      const mins = parseInt(timeData.asMinutes().toFixed()) - hourAsMins;
+      const humanTime = `${!!hours ? hours + " h" : ""} ${!!mins ? mins + " min" : ""}`
       return <p>{humanTime}</p>;
     },
   },
@@ -55,9 +57,12 @@ const columns: ColumnsType<DataType> = [
   {
     title: "Action",
     key: "action",
+    align: "right",
     render: (_, record) => (
       <Space size="middle">
-        <Button>Buy Ticket</Button>
+        <Link href="/purchase" className={styles.linkButton} id={styles.about}>
+          Buy Ticket
+        </Link>
       </Space>
     ),
   },
