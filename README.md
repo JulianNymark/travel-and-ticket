@@ -13,4 +13,4 @@ Backend is generating mock data for this demo, but it's an AWS Lambda that will 
 ![image showing what it looks like!](./README/screenshot.png)
 
 jsdoc generates html under `jsdoc/index.html`
-![image showing what it looks like!](./README/screenshot.png)
+![image showing what it looks like!](./README/jsdoc.png)
