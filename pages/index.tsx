@@ -7,13 +7,19 @@ import { TravelBookingForm } from "../components/TravelBookingForm";
 import { TripTable } from "../components/TripTable";
 import styles from "../styles/Home.module.css";
 
+/**
+ * Site Name
+ * @type {string}
+ */
+const siteName = "Travel and Ticket";
+
 export default function Home() {
   const [tripData, setTripData] = useState([]);
 
   return (
     <div className={styles.container}>
       <Head>
-        <title>Travel and Ticket</title>
+        <title>{siteName}</title>
         <meta
           name="description"
           content="simple POC for ordering tickets using existing open source components"

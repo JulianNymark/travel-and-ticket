@@ -8,7 +8,8 @@
     "cypress": "cypress open",
     "cypress:headless": "cypress run",
     "e2e": "start-server-and-test dev http://localhost:3000 cypress",
-    "e2e:headless": "start-server-and-test dev http://localhost:3000 cypress:headless"
+    "e2e:headless": "start-server-and-test dev http://localhost:3000 cypress:headless",
+    "jsdoc": "jsdoc -c jsdoc.json"
   },
   "dependencies": {
     "antd": "^5.1.2",
@@ -18,6 +19,11 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.7",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-typescript": "^7.18.6",
+    "jsdoc-babel": "^0.5.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@types/node": "18.0.6",
@@ -26,6 +32,7 @@
     "cypress": "10.3.1",
     "jest": "^29.3.1",
     "jest-environment-jsdom": "^29.3.1",
+    "jsdoc": "^4.0.0",
     "start-server-and-test": "1.14.0",
     "typescript": "4.7.4"
   }
