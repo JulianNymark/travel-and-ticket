@@ -5,6 +5,15 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: #9bd7ff;
+  overflow-x: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -msbox-sizing: border-box;
+}
+
+body {
+  position: relative;
 }
 
 a {
@@ -15,3 +24,14 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.list .ant-card-body {
+  padding: 0 !important;
+}
+
+.list {
+  width: 80vw;
+  max-width: 900px;
+  margin-top: 30px;
+}
+

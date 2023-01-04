@@ -30,6 +30,7 @@ const columns: ColumnsType<DataType> = [
     title: "ID",
     dataIndex: "id",
     key: "id",
+    responsive: ['lg', 'md']
   },
   {
     title: "Duration",
@@ -43,16 +44,20 @@ const columns: ColumnsType<DataType> = [
       const humanTime = `${!!hours ? hours + " h" : ""} ${!!mins ? mins + " min" : ""}`
       return <p>{humanTime}</p>;
     },
+    defaultSortOrder: 'ascend',
+    sorter: (a, b) => a.estDuration - b.estDuration,
   },
   {
     title: "From",
     dataIndex: "from",
     key: "from",
+    responsive: ['lg', 'md']
   },
   {
     title: "To",
     dataIndex: "to",
     key: "to",
+    responsive: ['lg', 'md']
   },
   {
     title: "Action",
@@ -61,7 +66,8 @@ const columns: ColumnsType<DataType> = [
     render: (_, record) => (
       <Space size="middle">
         <Link href="/purchase" className={styles.linkButton} id={styles.about}>
-          Buy Ticket
+          <span className={styles.desktop}>Buy Ticket</span>
+          <span className={styles.mobile}>Buy</span>
         </Link>
       </Space>
     ),

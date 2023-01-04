@@ -24,28 +24,27 @@ export default function Home() {
           name="description"
           content="simple POC for ordering tickets using existing open source components"
         />
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no"></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.tagline}>🚄 Find Travels... buy tickets 🎫</h1>
 
-        <Card title="Find Trip" bordered={false} className={styles.form}>
-          <TravelBookingForm setTripData={setTripData} />
-        </Card>
+          <h1 className={styles.tagline}>🚄 Find Travels... buy tickets 🎫</h1>
 
-        {!!tripData?.length && (
-          <Card className={styles.list}>
-            <TripTable data={tripData}/>
+          <Card title="Find Trip" bordered={false} className={styles.form}>
+            <TravelBookingForm setTripData={setTripData} />
           </Card>
-        )}
 
-        <div className={styles.grid}>
+          {!!tripData?.length && (
+            <Card className="list">
+              <TripTable data={tripData}/>
+            </Card>
+          )}
           <Link href="/about" className={styles.card} id={styles.about}>
             <h2>About Page &rarr;</h2>
             <p>Cypress will test if this link is working.</p>
           </Link>
-        </div>
       </main>
     </div>
   );
